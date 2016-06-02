@@ -1,4 +1,5 @@
 user_id=$(config user_name)
+source_url=$(config source_url)
 
 echo downloading $source_url  ...
 sudo -u $user_id -E bash --login -c "curl -f -o ~/app.tar.gz $source_url -s" || exit 1
