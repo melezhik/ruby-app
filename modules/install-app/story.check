@@ -1,1 +1,11 @@
 install-app-ok
+Hello World
+
+generator: <<CODE
+!bash
+if test -d /home/$(config user_name)/app; then
+  echo assert: 1 directory /home/$(config user_name)/app exists
+else
+  echo assert: 1 directory /home/$(config user_name)/app exists
+fi
+CODE
