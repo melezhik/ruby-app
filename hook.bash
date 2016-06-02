@@ -1,20 +1,9 @@
 action=$(config action)
 
-if test "${action}" = "install-all"; then
-
-  run_story create-user
-  run_story install-ruby
-  run_story install-app
-
-else
-
-  for s in $action
-  do
-    run_story $s
-  done
-
-fi
-
+for s in $action
+do
+  run_story $s
+done
 
 set_stdout install-all-done
 
