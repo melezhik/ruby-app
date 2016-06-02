@@ -6,7 +6,7 @@ curl -sSL https://rvm.io/mpapis.asc | gpg2 --import - || exit 1
 
 source /usr/local/rvm/scripts/rvm
 
-gem install bundler --no-ri --no-rdoc
+gem install bundler -q --no-ri --no-rdoc
 
 echo ruby version: $(ruby --version)
 
